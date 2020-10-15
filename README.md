@@ -1,4 +1,4 @@
-# taro3-vant-sample
+# taro3-vant
 
 > Taro3 中使用 vant-weapp 的示例 React 版本
 
