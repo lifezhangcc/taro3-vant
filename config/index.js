@@ -1,26 +1,30 @@
+const path = require('path');
+const outputPath = `dist/${process.env.TARO_ENV}`;
+
 const config = {
-  projectName: 'taro3_react',
-  date: '2020-8-10',
+  projectName: 'taro3_vant',
+  date: '2020-10-14',
   designWidth: 750,
   deviceRatio: {
+    375: 1 / 2,
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: outputPath,
   plugins: [],
   defineConstants: {
   },
   copy: {
     patterns: [
-      { from: 'src/components/vant-weapp/dist/wxs', to: 'dist/components/vant-weapp/dist/wxs' },
-      { from: 'src/components/vant-weapp/dist/common/style', to: 'dist/components/vant-weapp/dist/common/style' },
-      { from: 'src/components/vant-weapp/dist/common/index.wxss', to: 'dist/components/vant-weapp/dist/common/index.wxss' },
-      { from: 'src/components/vant-weapp/dist/calendar/index.wxs', to: 'dist/components/vant-weapp/dist/calendar/index.wxs' },
-      { from: 'src/components/vant-weapp/dist/calendar/utils.wxs', to: 'dist/components/vant-weapp/dist/calendar/utils.wxs' },
-      { from: 'src/components/vant-weapp/dist/calendar/calendar.wxml', to: 'dist/components/vant-weapp/dist/calendar/calendar.wxml' },
-      { from: 'src/components/vant-weapp/dist/calendar/components/month/index.wxs', to: 'dist/components/vant-weapp/dist/calendar/components/month/index.wxs' },
+      { from: 'src/components/vant-weapp/wxs', to: `${outputPath}/components/vant-weapp/wxs` },
+      { from: 'src/components/vant-weapp/common/style', to: `${outputPath}/components/vant-weapp/common/style` },
+      { from: 'src/components/vant-weapp/common/index.wxss', to: `${outputPath}/components/vant-weapp/common/index.wxss` },
+      { from: 'src/components/vant-weapp/calendar/index.wxs', to: `${outputPath}/components/vant-weapp/calendar/index.wxs` },
+      { from: 'src/components/vant-weapp/calendar/utils.wxs', to: `${outputPath}/components/vant-weapp/calendar/utils.wxs` },
+      { from: 'src/components/vant-weapp/calendar/calendar.wxml', to: `${outputPath}/components/vant-weapp/calendar/calendar.wxml` },
+      { from: 'src/components/vant-weapp/calendar/components/month/index.wxs', to: `${outputPath}/components/vant-weapp/calendar/components/month/index.wxs` },
     ],
     options: {
     }
